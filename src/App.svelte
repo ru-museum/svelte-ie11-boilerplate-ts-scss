@@ -10,7 +10,7 @@
 <main>
 	<h1>Hello {name}!</h1>
 	<h1>svelte-ie11-boilerplate</h1>
-	<h2 style="">
+	<h2>
 	   + TypeScript<br>&nbsp;&nbsp; + SCSS(SASS)
 	</h2>
 	<h4>svelte-ie11-boilerplate-ts-scss</h4>
