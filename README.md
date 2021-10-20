@@ -39,6 +39,22 @@ npm run dev
 - ブラウザで [localhost:5000](http://localhost:5000/) にアクセスしますと初期画面が表示されます。
 - 画面で各サンプルが正しく表示されていることを確認して下さい。
 
+## 【注意】
+- ファイル **global.d.ts** が src フォルダに無い場合は以下のエラーが表示されます。   　　  
+```
+(!) Plugin typescript: @rollup/plugin-typescript TS2307: Cannot find module './App.svelte' or its corresponding type declarations.
+src/main.ts: (1:17)
+1 import App from './App.svelte';
+```
+### ★対処法
+- CRON では TypeScript に必要な **global.d.ts** ファイルを何故か認識せずダウンロードに含まれません。  
+※ ZIP ダウンロードでは含まれます。
+- **global.d.ts** が src フォルダに無い場合は以下のスクリプトを実行すると生成されます。   　　  
+```
+node scripts/createGlobal.d.ts.js 
+```
+　　※ 同梱の setupTypeScript.js でも可能ですが、重複されて記述されますのでその部分の削除が必要となります。
+
 3. 公開用にビルドします。
 
 ```
