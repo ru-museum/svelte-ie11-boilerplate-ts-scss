@@ -45,7 +45,7 @@ export default {
 		svelte({
 			preprocess: [
 			   sveltePreprocess({ sourceMap: !production }),
-         scss({ /* scss options */ })
+         		   scss({ /* scss options */ })
 			],
 			compilerOptions: {
 				// enable run-time checks when not in production
@@ -71,34 +71,34 @@ export default {
 			inlineSources: !production
 		}),
     
-    /**
-     * 記述は resolve commonjs の後でなければエラー
-     * compile to good old IE11 compatible ES5
-     */
-    babel({
-     extensions: [".js", ".mjs", ".html", ".svelte"],
-     babelHelpers: 'runtime',
-     exclude: [ 'node_modules/@babel/**', 'node_modules/core-js/**' ],
-     presets: [
-       [
-         "@babel/preset-env",
-         {
-            targets: "> 0.25%, not dead",
-            useBuiltIns: 'usage',
-            corejs: 3
-         },
-       ],
-     ],
-     plugins: [
-       "@babel/plugin-syntax-dynamic-import",
-       [
-         "@babel/plugin-transform-runtime",
-         {
-           useESModules: true
-         },
-       ],
-     ],
-    }),
+	    /**
+	     * 記述は resolve commonjs の後でなければエラー
+	     * compile to good old IE11 compatible ES5
+	     */
+	    babel({
+	     extensions: [".js", ".mjs", ".html", ".svelte"],
+	     babelHelpers: 'runtime',
+	     exclude: [ 'node_modules/@babel/**', 'node_modules/core-js/**' ],
+	     presets: [
+	       [
+		 "@babel/preset-env",
+		 {
+		    targets: "> 0.25%, not dead",
+		    useBuiltIns: 'usage',
+		    corejs: 3
+		 },
+	       ],
+	     ],
+	     plugins: [
+	       "@babel/plugin-syntax-dynamic-import",
+	       [
+		 "@babel/plugin-transform-runtime",
+		 {
+		   useESModules: true
+		 },
+	       ],
+	     ],
+	    }),
 
 		// In dev mode, call `npm run start` once
 		// the bundle has been generated
