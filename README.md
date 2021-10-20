@@ -34,5 +34,25 @@ npm run dev
 ```
 npm run build
 ```
+## 【注意】
+
+* build 時に以下の警告が表示される場合は一部を修正して下さい。
+```
+(!) Plugin typescript: @rollup/plugin-typescript: Typescript 'sourceMap' compiler option must be set to generate source maps.
+```
+**rollup.config.js**：  
+【修正】  sourcemap: true　⇒ **sourcemap: !production**
+
+```
+export default {
+    input: 'src/main.ts',
+    output: {
+    // sourcemap: true,  
+    sourcemap: !production,
+```
+※ [参考：stackoverflow](https://stackoverflow.com/questions/63128597/how-to-get-rid-of-the-rollup-plugin-typescript-rollup-sourcemap-option-must)
 
 4. WEB 上へ公開するには、public フォルダ内の必要なファイル(.map を除く)を アップします。
+
+
+
