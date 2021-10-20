@@ -27,7 +27,7 @@ degit 側で未対応の為、以下のエラーが出る場合は明示的に�
 ```
 -  **main** を指定して実行
 ```
-npx degit ru-museum/svelte-ie11-boilerplate-ts-scss#main to svelte-app
+npx degit ru-museum/svelte-ie11-boilerplate-ts-scss#main svelte-app
 ```
 
 2. [Rollup](https://rollupjs.org/) をスタートします。
