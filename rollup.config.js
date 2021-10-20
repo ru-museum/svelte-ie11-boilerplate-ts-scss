@@ -45,8 +45,7 @@ export default {
 		svelte({
 			preprocess: [
 			   sveltePreprocess({ sourceMap: !production }),
-			   // typescript({tsconfig: production? "./tsconfig.json" : "./tsconfig.prod.json"}), 
-            scss({ /* scss options */ })
+		           scss({ /* scss options */ })
 			],
 			compilerOptions: {
 				// enable run-time checks when not in production
@@ -76,7 +75,7 @@ export default {
 		 * 記述は resolve commonjs の後でなければエラー
 		 * compile to good old IE11 compatible ES5
 		 */
-      babel({
+		babel({
 		   extensions: [".js", ".mjs", ".html", ".svelte"],
 		   babelHelpers: 'runtime',
 		   exclude: [ 'node_modules/@babel/**', 'node_modules/core-js/**' ],
@@ -99,7 +98,7 @@ export default {
 		       },
 		     ],
 		   ],
-      }),
+ 		}),
 
 		// In dev mode, call `npm run start` once
 		// the bundle has been generated
