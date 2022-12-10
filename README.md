@@ -2,7 +2,7 @@
 svelte-template for IE11, TypeScript and SCSS(SASS)  
 IE11、TypeScript 及び SCSS(SASS) の為のテンプレート  
 
-**[ 注意 ]**　元となる sveltejs/template は既に更新が止まっており、**vite** への移行が促されていますのでご注意下さい。
+**[ 注意 ]**　元となる sveltejs/template は既に更新が止まり **Public Archive** となっており、**vite** への移行が促されていますのでご注意下さい。
 
 # 特徴
 - この Svelte apps は [https://github.com/sveltejs/template](https://github.com/sveltejs/template) に基づいています。  
