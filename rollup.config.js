@@ -3,11 +3,13 @@ import babel from "@rollup/plugin-babel";
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
-import { terser } from 'rollup-plugin-terser';
+import { terser } from "@el3um4s/rollup-plugin-terser";
 import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
-import { scss } from 'svelte-preprocess';
-import css from 'rollup-plugin-css-only';
+import css from "@el3um4s/rollup-plugin-css-only";
+import pkg from 'svelte-preprocess';
+const { scss } = pkg;
+import { spawn } from "child_process";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -21,7 +23,7 @@ function serve() {
 	return {
 		writeBundle() {
 			if (server) return;
-			server = require('child_process').spawn('npm', ['run', 'start', '--', '--dev'], {
+			        server = spawn('npm', ['run', 'start', '--', '--dev'], {
 				stdio: ['ignore', 'inherit', 'inherit'],
 				shell: true
 			});
