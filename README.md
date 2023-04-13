@@ -136,9 +136,7 @@ npm install @el3um4s/rollup-plugin-css-only @el3um4s/rollup-plugin-terser
 + server = spawn('npm', ['run', 'start', '--', '--dev'], {
 
 ```
-
-
-## 【注意6】
+## 【注意4】
 (2023-04-13)
 * typescript のバージョンアップ（5.0）に伴い以下のエラー表示されます。
 * deprecated  importsNotUsedAsValues, preserveValueImports
