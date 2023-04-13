@@ -136,3 +136,27 @@ npm install @el3um4s/rollup-plugin-css-only @el3um4s/rollup-plugin-terser
 + server = spawn('npm', ['run', 'start', '--', '--dev'], {
 
 ```
+
+
+## 【注意6】
+(2023-04-13)
+* typescript のバージョンアップ（5.0）に伴い以下のエラー表示されます。
+* deprecated  importsNotUsedAsValues, preserveValueImports
+```
+tsconfig options "importsNotUsedAsValues" and "preserveValueImports" are deprecated. Either set "ignoreDeprecations" to "5.0" in your tsconfig.json to silence this warning, or replace them in favor of the new "verbatimModuleSyntax" flag.
+LiveReload enabled
+(!) Plugin typescript: @rollup/plugin-typescript TS5101: Option 'importsNotUsedAsValues' is deprecated and will stop functioning in TypeScript 5.5. Specify compilerOption '"ignoreDeprecations": "5.0"' to silence this error.
+  Use 'verbatimModuleSyntax' instead.
+(!) Plugin typescript: @rollup/plugin-typescript TS5101: Option 'preserveValueImports' is deprecated and will stop functioning in TypeScript 5.5. Specify compilerOption '"ignoreDeprecations": "5.0"' to silence this error.
+  Use 'verbatimModuleSyntax' instead.
+```
+* 解決方法は以下の解説に依っています。  
+参照：[TypeScript errors and how to fix them : TS5101](https://typescript.tv/errors/)
+
+### 【解決方法】
+tsconfig.json　
+```
+  "compilerOptions": {
+    “ignoreDeprecations”: “5.0”
+  }
+``
