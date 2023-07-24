@@ -5,6 +5,8 @@ IE11、TypeScript 及び SCSS(SASS) の為のテンプレート
 **[ 注意 ]** 　元となる **sveltejs/template** は既に更新が止まり **Public Archive** となり **vite** への移行が促されていますのでご注意下さい。
 
 # 特徴
+- **svelte 4** へのバージョンアップがされています（2023-07-25）。  
+
 - この Svelte apps は [https://github.com/sveltejs/template](https://github.com/sveltejs/template) に基づいています。  
 
 - TypeScript 及び SCSS(SASS) を使用する為のテンプレートです。  
