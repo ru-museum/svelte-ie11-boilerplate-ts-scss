@@ -11,7 +11,7 @@ IE11、TypeScript 及び SCSS(SASS) の為のテンプレート
 # 特徴
 - **svelte5** へのアップグレードはエラーの為 **svelte v4.2.19** で固定されています（2026-04-15）。  
 - この Svelte apps は [https://github.com/sveltejs/template](https://github.com/sveltejs/template) に基づいています。  
-- 特に<ins>サーバーに依存せず **standalone** での起動が可能です</ins>。  
+- 特に<ins>build 後サーバーに依存せず **standalone** での起動が可能です</ins>。  
 
 - TypeScript 及び SCSS(SASS) を使用する為のテンプレートです。  
 ※ TypeScript は添付のスクリプト（setupTypeScript.js）に依り導入されています。  
